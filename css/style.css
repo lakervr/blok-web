@@ -1,0 +1,126 @@
+body{
+    background-color: #991782;
+    color: #ffffff;
+    font-family: 'Helvetica';
+    margin: auto;
+}
+
+section {
+    margin: 7%;
+}
+
+#navtop{
+    background-color: #991782;
+    position: sticky;
+}
+
+.navtopbuttonleft{
+    color:white;
+    float: left;
+}
+
+.navtopbuttonright{
+    color:white;
+    float: right
+}
+
+#navbottom{
+    overflow: hidden;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    background-color: #ffffff;
+    }
+
+.navbottombutton {
+    float: left;
+    display: block;
+    color: #991782;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+header{
+    text-align: center;
+}
+
+li{
+    list-style:none;
+}
+
+#placeholder{
+    width: 100%;
+}
+
+p{
+    margin-top: 0%;
+    font-size: 12px;
+    margin-bottom: 5%;
+}
+
+h3{
+    margin-bottom: 0%;
+    margin-top: 2%;
+    font-size: 16px;
+}
+
+#logo{
+    width: 15%;
+}
+
+section.zoeken{
+    text-align: center;
+}
+
+a{
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.genres, .alleopgeslagen{
+    padding-bottom: 30%;
+}
+
+.genre{
+    background-color: #ffdf5d;
+    text-align: center;
+    padding: 3%;
+    margin-top: 3%;
+    color: black;
+    font-weight: bold;
+}
+
+#genrebijzoeken{
+    text-align: center;
+    margin-top: 8%
+}
+
+.verhaal{
+    width: 60%;
+    margin: auto;
+    text-align:center;
+    margin-top: 5%;
+}
+
+#placeholder{
+  border: 3px solid transparent;
+}
+
+#placeholder:hover{
+  border: 3px solid #ffdf5d;
+}
+
+#invulveldzoeken{
+    width: 80%;
+}
+
+/*
+
+td{
+    margin-left: 0%;
+}
+
+
+/*https://www.w3schools.com/howto/howto_css_bottom_nav.asp/*
