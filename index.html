@@ -1,80 +1,211 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WOW AIR verhalen</title>
     <link rel='stylesheet' type='text/css' href='css/style.css'>
+    <script src='js/jquery.js'></script>
 </head>
+
 <body>
 
-<header>
-
-    <nav id='navigatie'>
+    <nav class='navigatie'>
         <ul>
-            <div>
-                <li><a href='profiel.html'><img id='profiel' src='images/Artboard%209.png'></a></li>
-                <li><a href='instellingen.html'><img id='instellingen' src='images/Artboard%2010.png'></a></li>
-            </div>
-            <div>
-                <li><img id='logo' src='images/sitelogo.svg'></li>
-            </div>
+            <li class='links'><img src='images/profiel_icon.png'></li>
+            <li class='rechtsklein'><a href='instellingen.html'><img src='images/instellingen_icon.png'></a></li>
+            <li class='rechtsgroot'><img class='zoekentop' src='images/zoeken_icon_paars.png' /><a class='mijnprofiel'>Mijn profiel<span><img class='dropdown' src='images/dropdown_icon.png'/></span></a></li>
         </ul>
+        <div class='logocontainer'>
+            <a href='index.html'><img class='logo' src='images/logo.png'></a>
+        </div>
     </nav>
 
-    <nav id='tabbar'>
-        <ul>
-            <li><a href='index.html'><img src="images/Artboard%206.png"></a></li>
-            <li><a href='zoeken.html'><img src="images/Artboard%207.png"></a></li>
-            <li><a href='bibliotheek.html'><img src="images/Artboard%208.png"></a></li>
-        </ul>
+    <div class='banner'>
+        <img src='images/banner.png'>
+    </div>
+
+    <nav class='tabbar'>
+        <div class='zoekencontainer'>
+            <a href='zoeken.html'><img class='zoeken' src='images/zoeken_icon_wit.png'>ZOEKEN</a>
+        </div>
+        <div>
+            <div class='homecontainer'>
+                <a href='index.html'><img class='home' src='images/home_icon.png'>HOME</a>
+            </div>
+            <div class='bibliotheekcontainer'><a href='bibliotheek.html'><img class='bibliotheek' src='images/bibliotheek_icon.png'>BIBLIOTHEEK</a>
+            </div>
+        </div>
     </nav>
-</header>
 
-<h2>Populaire verhalen</h2>
-<section id='populaireverhalen'>
-        <article>
-            <a href='verhaal.html'><img class='previewverhaal' src='images/verhaal_droom.jpg'></a>
-            <h3>Droom</h3>
-            <p>humor</p>
-        </article>
-        <article>
-            <a href='verhaal.html'><img class='previewverhaal' src='images/verhaal_verliefd.jpg'></a>
-            <h3>Verliefd</h3>
-            <p>liefde</p>
-        </article>
-        <article>
-            <a href='verhaal.html'><img class='previewverhaal' src='images/verhalen_ongeluk.jpg'></a>
-            <h3>Ongeluk</h3>
-            <p>verdriet</p>
-        </article>
-</section>
+    <section class='zoekendesktop'>
+        <div class='filteren'>
+            <div class='titelfilter'>
+                <img class='filtericon' src='images/filter_icon.png'>
+                <h1>FILTEREN</h1>
+            </div>
+            <h2>Thema</h2>
+            <div class='checkrij1'>
+                <label class="checkboxcontainer">Liefde
+                               <input type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Humor
+                               <input type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Verdriet
+                               <input type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Fictie
+                               <input type="checkbox" >
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Woede
+                               <input type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+            </div>
+            <div class='checkrij2'>
+                <label class="checkboxcontainer">Bekenden
+                               <input type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Kinderen
+                               <input type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Sport
+                               <input type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Politiek
+                               <input type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Overig
+                               <input type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+            </div>
+        </div>
 
-<h2>Aanbevolen voor jou</h2>
-<section id='aanbevolenvoorjou'>
-        <article>
-            <a href='verhaal.html'><img class='previewverhaal' src='images/verhaal_nichterig.jpg'></a>
-            <h3>Nichterig</h3>
-            <p>woede</p>
-        </article>
-        <article>
-            <a href='verhaal.html'><img class='previewverhaal' src='images/verhalen_moe.jpg'></a>
-            <h3>Moe</h3>
-            <p>humor</p>
-        </article>
-        <article>
-            <a href='verhaal.html'><img class='previewverhaal' src='images/verhalen_ongeboren.jpg'></a>
-            <h3>Ongeboren</h3>
-            <p>liefde</p>
-        </article>
-</section>
+        <div class='slider'>
+            <h2>Duur</h2>
+            <output id="outputId">10</output>
+            <span id='minuten'>minuten</span>
+            <form name="Form">
+                <input type="range" name="inputName" id="inputId" value="10" min="1" max="20" oninput="outputId.value = inputId.value">
+            </form>
+        </div>
 
-<h2>Top 3 thema's</h2>
-<section id='top3themas'>
-    <li><a href=''><img class='previewthema' src='images/thema_liefde.jpg'></a></li>
-    <li><a href=''><img class='previewthema'src='images/thema_verdriet.jpg'></a></li>
-    <li><a href=''><img class='previewthema'src='images/thema_humor.jpg'></a></li>
-</section>
+        <div class='call-to-action-wrapper'>
+            <a href='resultaten.html'>
+            <button class="call-to-action">
+            RESULTATEN BEKIJKEN
+            </button>
+            </a>
+        </div>
+
+    </section>
+
+    <section class='populaireverhalen'>
+        <h2>Populaire verhalen</h2>
+        <p>De best beoordeelde verhalen volgens de lezers</p>
+        <div class='verhalencontainer'>
+            <article>
+                <a href='verhaal.html'><img src='images/verhaal_neerslachtig.jpg'></a>
+                <h3>Neerslachtig</h3>
+                <p>verdriet</p>
+            </article>
+            <article>
+                <a><img src='images/verhaal_verliefd.jpg'></a>
+                <h3>Verliefd</h3>
+                <p>liefde</p>
+            </article>
+            <article>
+                <a><img  src='images/verhaal_nichterig.jpg'></a>
+                <h3>Nichterig</h3>
+                <p>woede</p>
+            </article>
+            <article>
+                <a><img  src='images/verhaal_droom.jpg'></a>
+                <h3>Droom</h3>
+                <p>humor</p>
+            </article>
+            <article>
+                <a><img src='images/verhaal_ongeboren.jpg'></a>
+                <h3>Ongeboren</h3>
+                <p>liefde</p>
+            </article>
+            <article>
+                <a><img  src='images/verhaal_ongeluk.jpg'></a>
+                <h3>Ongeluk</h3>
+                <p>humor</p>
+            </article>
+        </div>
+    </section>
+
+    <section class='aanbevolenvoorjou'>
+        <h2>Aanbevolen voor jou</h2>
+        <p>Verhalen gebaseerd op jou opgeslagen verhalen</p>
+        <div class='verhalencontainer'>
+            <article>
+                <a href='verhaal.html'><img src='images/verhaal_neerslachtig.jpg'></a>
+                <h3>Neerslachtig</h3>
+                <p>verdriet</p>
+            </article>
+            <article>
+                <a><img src='images/verhaal_verliefd.jpg'></a>
+                <h3>Verliefd</h3>
+                <p>liefde</p>
+            </article>
+            <article>
+                <a><img class=breedverhaal src='images/verhaal_omslachtig.jpg'></a>
+                <h3>Enigszins aan de omslachtige kant</h3>
+                <p>woede</p>
+            </article>
+            <article>
+                <a><img  src='images/verhaal_droom.jpg'></a>
+                <h3>Droom</h3>
+                <p>humor</p>
+            </article>
+            <article>
+                <a><img src='images/verhaal_ongeboren.jpg'></a>
+                <h3>Ongeboren</h3>
+                <p>liefde</p>
+            </article>
+        </div>
+    </section>
+
+    <section class='top3themas'>
+        <h2>Top 3 thema's</h2>
+        <div>
+            <a>
+                <article class='thema1'>
+                    <h3>23 VERHALEN</h3>
+                    <p>LIEFDE</p>
+                </article>
+            </a>
+            <a>
+                <article class='thema2'>
+                    <h3>12 VERHALEN</h3>
+                    <p>VERDRIET</p>
+                </article>
+            </a>
+            <a>
+                <article class='thema3'>
+                    <h3>8 VERHALEN</h3>
+                    <p>HUMOR</p>
+                </article>
+            </a>
+        </div>
+    </section>
+
+    <script src='js/javascript.js'></script>
 
 </body>
+
 </html>

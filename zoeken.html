@@ -1,73 +1,113 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>WOW AIR verhalen</title>
     <link rel='stylesheet' type='text/css' href='css/style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='js/jquery.js'></script>
 </head>
+
 <body>
 
-<header>
-
-    <nav id='navigatie'>
+    <nav class='navigatie'>
         <ul>
-            <div>
-                <li><a href='profiel.html'><img id='profiel' src='images/Artboard%209.png'></a></li>
-                <li><a href='instellingen.html'><img id='instellingen' src='images/Artboard%2010.png'></a></li>
-            </div>
-            <div>
-                <li><img id='logo' src='images/sitelogo.svg'></li>
-            </div>
+            <li class='links'><img src='images/profiel_icon.png'></li>
+            <li class='rechtsklein'><a href='instellingen.html'><img src='images/instellingen_icon.png'></a></li>
+            <li class='rechtsgroot'><img class='zoekentop' src='images/zoeken_icon_paars.png' /><a class='mijnprofiel'>Mijn profiel<span><img class='dropdown' src='images/dropdown_icon.png'/></span></a></li>
         </ul>
+        <div class='logocontainer'>
+            <a href='index.html'><img class='logo' src='images/logo.png'></a>
+        </div>
     </nav>
 
-    <nav id='tabbar'>
-        <ul>
-            <li><a href='index.html'><img src="images/Artboard%206.png"></a></li>
-            <li><a href='zoeken.html'><img src="images/Artboard%207.png"></a></li>
-            <li><a href='bibliotheek.html'><img src="images/Artboard%208.png"></a></li>
-        </ul>
+    <nav class='tabbar'>
+        <div class='zoekencontainer'>
+            <a href='zoeken.html'><img class='zoeken' src='images/zoeken_icon_wit.png'>ZOEKEN</a>
+        </div>
+        <div>
+            <div class='homecontainer'>
+                <a href='index.html'><img class='home' src='images/home_icon.png'>HOME</a>
+            </div>
+            <div class='bibliotheekcontainer'><a href='bibliotheek.html'><img class='bibliotheek' src='images/bibliotheek_icon.png'>BIBLIOTHEEK</a>
+            </div>
+        </div>
     </nav>
-</header>
 
-<div class="input-icon-wrap">
-  <span class="input-icon"><span class="fa fa-search"></span></span>
-  <input type="text" class="input-with-icon" id="form-name">
-</div>
+    <section class='zoekenmobiel'>
+        <div class='filteren'>
+            <h2>Thema</h2>
+            <div class='checkrij1'>
+                <label class="checkboxcontainer">Liefde
+                               <input id='checkbox' type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Humor
+                               <input id='checkbox' type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Verdriet
+                               <input id='checkbox'type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Fictie
+                               <input id='checkbox'type="checkbox" >
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Woede
+                               <input id='checkbox'type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+            </div>
+            <div class='checkrij2'>
+                <label class="checkboxcontainer">Bekenden
+                               <input id='checkbox' type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Kinderen
+                               <input id='checkbox' type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Modern
+                               <input id='checkbox' type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Politiek
+                               <input id='checkbox'type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+                <label class="checkboxcontainer">Geloof
+                               <input id='checkbox'type="checkbox">
+                               <span class="checkmark"></span>
+                           </label>
+            </div>
+        </div>
+        <div class='slider'>
+            <h2>Duur</h2>
+            <output id="outputId">10</output>
+            <span id='minuten'>minuten</span>
+            <form name="Form">
+                <input type="range" name="inputName" id="inputId" value="10" min="1" max="20" oninput="outputId.value = inputId.value">
+            </form>
+        </div>
 
+        <div id='buttoncontainer'>
+            <button id="button1">
+            RESULTATEN BEKIJKEN
+            </button>
+        </div>
 
-<h2>Thema</h2>
-<section id='themafilteren'>
-    <form>
-        <input type='checkbox' name='genre' value='Liefde'/> Thriller
-        <br/>
-        <input type='checkbox' name='genre' value='Humor'/> Romantiek
-        <br/>
-        <input type='checkbox' name='genre' value='Fictie'/> Humor
-        <br/>
-        <input type='checkbox' name='genre' value='Verdriet'/> Politiek
-        <br/>
-        <input type='checkbox' name='genre' value='Bekenden'/> Science Fiction
-        <br/>
-        <br/>
-    </form>
-</section>
+        <div id='pop-up'>
+            <img src="images/error.png">
+            <h2>Om een verhaal te zoeken kun je gebruik maken van de filters</h2>
+        </div>
 
-<br/>
+    </section>
 
-<h2>Duur</h2>
-<section id='slidecontainer'>
-    <input type='range' min='1' max='20' value='5' id='myRange' class='slider'>
-    <br/>
-    <input type='submit' name='resultaten' value='Bekijk resultaten (6)'/>
-</section>
+    <script src='js/javascript.js'></script>
 
 </body>
 
-https://codepen.io/imohkay/pen/QwjwwY/
-
 </html>
-
-

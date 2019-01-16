@@ -1,42 +1,97 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WOW AIR verhalen</title>
     <link rel='stylesheet' type='text/css' href='css/style.css'>
+    <script src='js/jquery.js'></script>
 </head>
+
 <body>
 
-<header>
-
-    <nav id='navigatie'>
+  <nav class='navigatie'>
         <ul>
-            <li><a href='profiel.html'><img id='profiel' src='images/Artboard%209.png'></a></li>
-            <li><a href='instellingen.html'><img id='instellingen' src='images/Artboard%2010.png'></a></li>
-            <img id='logo' src='images/sitelogo.svg'>
+            <li class='links'><img src='images/profiel_icon.png'></li>
+            <li class='rechtsklein'><img src='images/instellingen_icon.png'></li>
+            <li class='rechtsgroot'><img class='zoekentop' src='images/zoeken_icon_paars.png' /><a class='mijnprofiel'>Mijn profiel<span><img class='dropdown' src='images/dropdown_icon.png'/></span></a></li>
         </ul>
+        <div class='logocontainer'>
+            <a href='index.html'><img class='logo' src='images/logo.png'></a>
+        </div>
     </nav>
 
-    <nav id='tabbar'>
-        <ul>
-            <li><a href='index.html'><img class='tabbutton' src="images/Artboard%206.png"></a></li>
-            <li><a href='zoeken.html'><img class='tabbutton' src="images/Artboard%207.png"></a></li>
-            <li><a href='bibliotheek.html'><img class='tabbutton'src="images/Artboard%208.png"></a></li>
-        </ul>
+    <nav class='tabbar'>
+        <div class='zoekencontainer'>
+            <a href='zoeken.html'><img class='zoeken' src='images/zoeken_icon_wit.png'>ZOEKEN</a>
+        </div>
+        <div>
+            <div class='homecontainer'>
+                <a href='index.html'><img class='home' src='images/home_icon.png'>HOME</a>
+            </div>
+            <div class='bibliotheekcontainer'><a href='bibliotheek.html'><img class='bibliotheek' src='images/bibliotheek_icon.png'>BIBLIOTHEEK</a>
+            </div>
+        </div>
     </nav>
 
-</header>
+    <div class='verhaalwrapper'>
+        <section class='verhaalcontainer'>
+            <img class='verhaalgroot' src='images/verhaal_neerslachtig_groot.png'>
+            <div class='gelevlak'>
+                <img class='delen' src='images/delen_icon_cirkel.png'>
+                <img class='hartje' src='images/hartje_icon_cirkel.png'>
+                <h1>Neerslachtig</h1>
+                <h2>thema: verdriet</h2>
+                <p>Het verhaal neerslachtig heeft een sombere sfeer. Amsterdam is een grote modderige bouwput en mensen kijken naar de grond.</p>
 
-<section id='verhaal'>
-        <article>
-            <img id='placeholder' src= 'images/placeholder-square.jpg'>
-            <h3>Titel verhaal</h3>
-            <p>Genre</p>
-       </article>
-       <button>Downloaden</button>
-       <button>Lezen</button>
-</section>
+                <div>
+                    <a href="leesmodus.html"><button class='buttonwit'> LEZEN</button></a>
+                    <button class='buttonwit'>DOWNLOADEN</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class='alleopgeslagen'>
+        <h2>Alle opgeslagen (6)</h2>
+        <p>Al jou opgeslagen verhalen</p>
+        <div class='verhalencontainer'>
+            <article>
+                <a href='verhaal.html'><img src='images/verhaal_neerslachtig.jpg'></a>
+                <h3>Neerslachtig</h3>
+                <p>verdriet</p>
+            </article>
+            <article>
+                <a><img src='images/verhaal_verliefd.jpg'></a>
+                <h3>Verliefd</h3>
+                <p>liefde</p>
+            </article>
+            <article>
+                <a><img  src='images/verhaal_nichterig.jpg'></a>
+                <h3>Nichterig</h3>
+                <p>woede</p>
+            </article>
+            <article>
+                <a><img  src='images/verhaal_droom.jpg'></a>
+                <h3>Droom</h3>
+                <p>humor</p>
+            </article>
+            <article>
+                <a><img src='images/verhaal_ongeboren.jpg'></a>
+                <h3>Ongeboren</h3>
+                <p>liefde</p>
+            </article>
+            <article>
+                <a><img  src='images/verhaal_ongeluk.jpg'></a>
+                <h3>Ongeluk</h3>
+                <p>humor</p>
+            </article>
+        </div>
+    </section>
+
+    <script src='js/javascript.js'></script>
 
 </body>
+
 </html>

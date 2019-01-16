@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WOW AIR verhalen</title>
     <link rel='stylesheet' type='text/css' href='css/style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='js/jquery.js'></script>
 </head>
+
 <body>
 
-<header>
-
-    <nav id='navigatie'>
+    <nav class='navigatie'>
         <ul>
-            <li><a href='profiel.html'><img id='profiel' src='images/Artboard%209.png'></a></li>
-            <li><a href='instellingen.html'><img id='instellingen' src='images/Artboard%2010.png'></a></li>
-            <img id='logo' src='images/sitelogo.svg'>
+            <li class='links'><img src='images/profiel_icon.png'></li>
+            <li class='rechtsklein'><a href='instellingen.html'><img src='images/instellingen_icon.png'></a></li>
+            <li class='rechtsgroot'><img class='zoekentop' src='images/zoeken_icon_paars.png' /><a class='mijnprofiel'>Mijn profiel<span><img class='dropdown' src='images/dropdown_icon.png'/></span></a></li>
         </ul>
+        <div class='logocontainer'>
+            <a href='index.html'><img class='logo' src='images/logo.png'></a>
+        </div>
     </nav>
 
-    <nav id='tabbar'>
-        <ul>
-            <li><a href='index.html'><img class='tabbutton' src="images/Artboard%206.png"></a></li>
-            <li><a href='zoeken.html'><img class='tabbutton' src="images/Artboard%207.png"></a></li>
-            <li><a href='bibliotheek.html'><img class='tabbutton'src="images/Artboard%208.png"></a></li>
-        </ul>
+    <nav class='tabbar'>
+        <div class='zoekencontainer'>
+            <a href='zoeken.html'><img class='zoeken' src='images/zoeken_icon_wit.png'>ZOEKEN</a>
+        </div>
+        <div>
+            <div class='homecontainer'>
+                <a href='index.html'><img class='home' src='images/home_icon.png'>HOME</a>
+            </div>
+            <div class='bibliotheekcontainer'><a href='bibliotheek.html'><img class='bibliotheek' src='images/bibliotheek_icon.png'>BIBLIOTHEEK</a>
+            </div>
+        </div>
     </nav>
 
-</header>
+    <section class='instellingen'>
+        <h2>Automatisch downloaden</h2>
+        <label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider2 round"></span>
+</label>
+    </section>
+
+    <script src='js/javascript.js'></script>
 
 </body>
+
 </html>
