@@ -169,39 +169,7 @@ body.single-toggle .drop:nth-child(10) {
 
 /* LEESMODUS */
 
-img.achtergrondverhaal {
-    height: 100%;
-    width: 100em;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    margin-left: -0.7em;
-    background-attachment: fixed;
-}
-
-div.leesmodus img.titel {
-    position: relative;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-.broodtekst {
-    position: relative;
-    font-family: courier;
-    line-height: 1.4em;
-    color: white;
-    padding-left: 17%;
-    padding-right: 17%;
-    font-size: 1em;
-    margin-top: -8%;
-    opacity: 0.8;
-    height: 500px;
-    width: 70%;
-}
-
-@media screen and (min-width:980px) {
+@media screen and (min-width:430px) {
     .broodtekst {
         position: relative;
         font-family: courier;
@@ -214,5 +182,40 @@ div.leesmodus img.titel {
         height: 500px;
         width: 60%;
         font-size: 1.25em;
+    }
+    section.mobielanimatie {
+        display: none;
+    }
+    img.achtergrondverhaal {
+        height: 100%;
+        width: 100em;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        margin-left: -0.7em;
+        background-attachment: fixed;
+        top: 0;
+    }
+
+    div.leesmodus img.titel {
+        position: relative;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .verhaalleesmodus {
+        display: none;
+    }
+    section.mobielanimatie {
+        position: absolute;
+        display: contents;
+        width: 100%;
+    }
+    section.mobielanimatie img {
+        margin: -1em
     }
 }
