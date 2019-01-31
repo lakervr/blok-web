@@ -12,6 +12,11 @@
 
 <body>
 
+    <header id='header1'>
+        <h1>test</h1>
+    </header>
+
+
     <nav class='navigatie'>
         <ul>
             <li class='links'><a href='profiel.html'><img src='images/profiel_icon.png'></a></li>
@@ -24,22 +29,20 @@
     </nav>
 
     <nav class='tabbar'>
-        <div class='zoekencontainer'>
-            <a href='zoeken.html'><img class='zoeken' src='images/zoeken_icon_wit.png'>ZOEKEN</a>
+        <div class='homecontainer'>
+            <a href='index.html'><img class='home' src='images/home_icon.png'><br>HOME</a>
         </div>
-        <div>
-            <div class='homecontainer'>
-                <a href='index.html'><img class='home' src='images/home_icon.png'>HOME</a>
-            </div>
-            <div class='bibliotheekcontainer'><a href='bibliotheek.html'><img class='bibliotheek' src='images/bibliotheek_icon.png'>BIBLIOTHEEK</a>
-            </div>
+        <div class='zoekencontainer'>
+            <a href='zoeken.html'><img class='zoeken' src='images/zoeken_icon_wit.png'><br>ZOEKEN</a>
+        </div>
+        <div class='bibliotheekcontainer'><a href='bibliotheek.html'><img class='bibliotheek' src='images/bibliotheek_icon.png'><br>BIBLIOTHEEK</a>
         </div>
     </nav>
 
     <section class='instellingen'>
         <h2>Automatisch downloaden</h2>
         <label class="switch">
-  <input type="checkbox" checked>
+  <input id="download1" type="checkbox">
   <span class="slider2 round"></span>
 </label>
     </section>
