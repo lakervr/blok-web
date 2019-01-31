@@ -43,45 +43,54 @@ $('.single-toggle.toggle').on('click', function () {
 
 makeItRain();
 
-/*MICROINTERACTIE ZOEKEN DESKTOP*/
-
-var zoekknop = document.querySelector('.zoekentop');
-var header = document.querySelector('body > header');
-
-zoekknop.addEventListener('click', function () {
-    header.classList.toggle('show-form');
-})
-
 /*MICROINTERACTIE FILTEREN*/
 
-var checkbox = document.getElementById('checkbox');
+var checkbox = document.querySelector('#checkbox1');
 
-document.getElementById('checkbox').addEventListener('click', resultatenGenerator, false);
+checkbox.addEventListener('click', resultatenGenerator);
 
 function Timeout() {
-    document.getElementById('buttoncontainer').innerHTML = '<a href="resultaten.html"><button id="button3">22 RESULTATEN</button></a>';
+    document.querySelector('#buttoncontainer').innerHTML = '<a href="resultaten.html"><button id="buttonstate3">22 RESULTATEN</button></a>';
 }
 
 function resultatenGenerator() {
     if (checkbox.checked == true) {
-        document.getElementById('buttoncontainer').innerHTML = '<button id="button2"<a href="resultaten.html"> <i class="fa fa-circle-o-notch fa-spin"></i>RESULTATEN BEKIJKEN </a> </button>';
+        document.querySelector('#buttoncontainer').innerHTML = '<button id="buttonstate2"<a href="resultaten.html"> <i class="fa fa-circle-o-notch fa-spin"></i>RESULTATEN BEKIJKEN </a> </button>';
         setTimeout(Timeout, 3000);
 
     } else {
-        document.getElementById('buttoncontainer').innerHTML = '<button id="button1"<a href="resultaten.html"> RESULTATEN BEKIJKEN </a> </button>';
+        document.querySelector('#buttoncontainer').innerHTML = '<button id="buttonstate1"<a href="resultaten.html"> RESULTATEN BEKIJKEN </a> </button>';
     }
 }
 
 function resultatenErrorOpen() {
-    document.getElementById("pop-up").style.display = "block";
+    document.querySelector("#pop-up").style.display = "block";
 }
 
-document.getElementById('button1').addEventListener('click', resultatenErrorOpen, false);
+document.querySelector('#buttonstate1').addEventListener('click', resultatenErrorOpen, false);
 
 function resultatenErrorClose() {
-    document.getElementById("pop-up").style.display = "none";
+    document.querySelector("#pop-up").style.display = "none";
 }
 
-document.getElementById('pop-up').addEventListener('click', resultatenErrorClose, false);
+document.querySelector('#pop-up').addEventListener('click', resultatenErrorClose, false);
 
 /*MICROINTERACTIE DOWNLOADEN*/
+
+var slider = document.querySelector('#download1');
+var header = document.querySelector('#header1');
+
+console.log(slider);
+
+slider.addEventListener('click', downloadPopUp);
+
+function downloadPopUp() {
+    if (slider.checked == true) {
+        header.style.display = 'content';
+        console.log('yes')
+
+    } else {
+        header.style.display = 'none';
+        console.log('nein')
+    }
+}
